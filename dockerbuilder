@@ -26,7 +26,6 @@ git checkout $REVISION
 
 BUILDDIR=/tmp/docker-$REVISION
 mkdir -p $BUILDDIR
-(cd dockerd && go get && go build -o $BUILDDIR/dockerd)
 (cd docker && go get && go build -o $BUILDDIR/docker)
 
 tar -f /tmp/docker.tgz -C $(dirname $BUILDDIR) -zc $(basename $BUILDDIR)
