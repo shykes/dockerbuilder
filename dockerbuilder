@@ -30,4 +30,4 @@ mkdir -p $BUILDDIR
 (cd docker && go get && go build -o $BUILDDIR/docker)
 
 tar -f /tmp/docker.tgz -C $(dirname $BUILDDIR) -zc $(basename $BUILDDIR)
-s3cmd -P put /tmp/docker.tgz s3://docker.io/builds/$(uname -s)/$(uname -m)/docker-$REVISION.tgz
+s3cmd -P put /tmp/docker.tgz s3://get.docker.io/builds/$(uname -s)/$(uname -m)/docker-$REVISION.tgz
