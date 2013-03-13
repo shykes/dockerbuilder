@@ -1,1 +1,13 @@
+from	shykes/devbox:ddf689246c95e6c1
+run	DEBIAN_FRONTEND=noninteractive apt-get install -y -q build-essential
+run	DEBIAN_FRONTEND=noninteractive apt-get install -y -q autoconf
+run	DEBIAN_FRONTEND=noninteractive apt-get install -y -q automake
+run	DEBIAN_FRONTEND=noninteractive apt-get install -y -q autotools-dev
+run	DEBIAN_FRONTEND=noninteractive apt-get install -y -q dh-make
+run	DEBIAN_FRONTEND=noninteractive apt-get install -y -q debhelper
+run	DEBIAN_FRONTEND=noninteractive apt-get install -y -q devscripts
+run	DEBIAN_FRONTEND=noninteractive apt-get install -y -q fakeroot
+run	DEBIAN_FRONTEND=noninteractive apt-get install -y -q xutils
+run	DEBIAN_FRONTEND=noninteractive apt-get install -y -q lintian
+run	DEBIAN_FRONTEND=noninteractive apt-get install -y -q pbuilder
 copy	dockerbuilder	/usr/local/bin/dockerbuilder
